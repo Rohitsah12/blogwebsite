@@ -1,53 +1,320 @@
-html{
+html {
     box-sizing: border-box;
 }
-*,*::before,*::after{
+*, *::before, *::after {
     box-sizing: inherit;
 }
-body{
-    background-color:  #f8f5f0;
+body {
+    background-color: #f8f5f0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.header{
+
+/* Header Styling */
+.header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px 10%;
     background-color: #f8f5f0;
-    border-bottom: 1px solid #ccc
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.logo{
+
+.logo {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
     color: black;
-    font-size: 80px;
-    margin: auto 100px;
-    letter-spacing: 5px;
-}
-.navbar{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 100px
+    font-size: 50px; 
+    letter-spacing: 2px;
 }
 
-.navbar a{
-    margin-right: 35px;
-    font-size: 35px;
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    font-size: 20px; 
     color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #555;
+}
+
+/* Search Icon */
+.search-icons {
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Input Field */
+.input-control {
+    width: 300px;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.input-control::placeholder {
+    font-size: 14px;
+    color: #aaa;
+}
+.hide{
+    display: none;
+}
+
+/* Get Started Button */
+.get-started {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get-started:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-control {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 30px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .get-started {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+/* Section */
+
+section{
+    height: 1000px;
+}
+
+
+/* Footer */
+.page-footer * {
+    color: #71717A;
+}
+.page-footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-section {
+    flex: 1 1 25%; 
+    padding: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.web-info .web-bio {
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.social-links {
+    margin: 32px 0;
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.social-icons:hover {
+    color: #000;
+}
+
+.helpful-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.helpful-links li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.helpful-links {
+    text-align: center;
+}
+
+.links {
     text-decoration: none;
 }
 
-.get-started{
+.links:hover {
+    text-decoration: underline;
+}
+
+.contact .input-group {
+    margin-bottom: 16px;
+}
+
+.input-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.input-control:focus {
+    outline: 0;
+    border-color: #000;
+}
+
+textarea.input-control {
+    resize: none;
+}
+
+.big-btn {
     background-color: #000;
-    color: white;
-    padding: 20px;
+    color: #fff;
     border: none;
-    border-radius: 50px;
-    font-size: 35px;
+    padding: 10px 20px;
+    border-radius: 3px;
     cursor: pointer;
-    &:hover{
-        opacity: 0.9;
+}
+
+.big-btn:hover {
+    background-color: #444;
+}
+
+.copyright-info {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-section {
+        flex: 1 1 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .web-info .web-bio {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .helpful-links li {
+        font-size: 0.9rem;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .web-info .web-bio {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        font-size: 1rem;
+    }
+
+    .helpful-links li {
+        font-size: 0.8rem;
+    }
+
+    .input-control {
+        font-size: 0.9rem;
+    }
+
+    .big-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .copyright-info {
+        font-size: 0.8rem;
+    }
+}
+
+
+
 

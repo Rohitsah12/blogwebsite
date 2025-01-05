@@ -5,15 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+
+<!-- **************************************************************Header********************************************************************* -->
     <header class="header">
             <div><a href="index.html" class="logo">MyBlog</a></div>
             <nav class="navbar">
-                <a href="#" class="write">📝Write</a>
+                <div>
+                    <span class="search-icons bi bi-search" id="searchIcon" ></span>
+                    <form action="" class="header-search-form hide" id="headerSearchForm">
+                        <input type="text" name="search-term" placeholder="Search blog..." class="input-control search-input" id="searchInput">
+                    </form>
+                </div>
+                <a href="#" class="write bi bi-pencil"> Write</a>
                 <a href="#" class="signin">Sign in</a>
                 <button class="get-started">Get Started</button>
             </nav>
     </header>
+
+<!-- *************************************************************Section ************************************************************************-->
+
+    <section>
+
+    </section>
+
+
+
+<!-- ************************************************************Footer**************************************************************************** -->
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="content-section"><a href="index.html" class="logo">MyBlog</a></div>
+            <div class="content-section web-info">
+                <h3 class="section-title">About Us</h3>
+                <div class="web-bio">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt accusamus commodi sit. Velit, ea praesentium id illo aliquam molestias voluptatibus corrupti facilis voluptatum sapiente dolorem ab adipisci numquam eius aliquid?
+                </div>
+                <div class="social-links">
+                    <a href="#" class="bi bi-facebook social-icons" title="Facebook"></a>
+                    <a href="#" class="bi bi-instagram social-icons" title="Instagram"></a>
+                    <a href="#" class="bi bi-twitter-x social-icons" title="X"></a>
+                    <a href="#" class="bi bi-youtube social-icons" title="Youtube"></a>
+                    <a href="#" class="bi bi-linkedin social-icons" title="Linkedin"></a>
+                </div>
+            </div>
+
+            <div class="content-section helpful-links">
+                <div>
+                    <h3 class="section-title">Helpful Links</h3>
+                    <ul>
+                        <li><a class="links" href="index.html">Support</a></li>
+                        <li><a class="links" href="#">Write</a></li>
+                        <li><a class="links" href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section contact">
+                <h3 class="section-title">Send Message..</h3>
+                <form action="#" class="contact-form">
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="Your email address...." class="input-control contact">
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" id="message" class="input-control contact" cols="30" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" name="send-message" class="big-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="copyright-info">
+            <p class="center">Copyright &copy; 2025 MyBlog</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
