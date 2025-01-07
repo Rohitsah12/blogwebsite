@@ -11,7 +11,7 @@
 
 <!-- **************************************************************Header********************************************************************* -->
     <header class="header">
-            <div><a href="index.html" class="logo">MyBlog</a></div>
+            <div><a href="index.html" class="logo">MyBlog</a></div> 
             <nav class="navbar">
                 <div>
                     <span class="search-icons bi bi-search" id="searchIcon" ></span>
@@ -19,22 +19,57 @@
                         <input type="text" name="search-term" placeholder="Search blog..." class="input-control search-input" id="searchInput">
                     </form>
                 </div>
-                <a href="#" class="write bi bi-pencil"> Write</a>
-                <a href="#" class="signin">Sign in</a>
-                <button class="get-started">Get Started</button>
+                <a href="./write.html" class="write bi bi-pencil" id="writeButton"> Write</a>
+                <i class="bi bi-bell"></i>
+                <img src="./design.png" alt="Profile Picture" class="profile-pic"  onclick="toggleDropdown()">
             </nav>
     </header>
 
-<!-- *************************************************************Section ************************************************************************-->
+<!-- *************************************************************Main Section ************************************************************************-->
 
-    <section>
+    <main>
+        <section>
+        <div class="container">
+            <h1 class="title">Explore Our Latest Stories</h1>
+            <p class="subtitle">Discover insights, experiences, and knowledge from our community of writers</p>
+            <button class="start-button" onclick="startReading()">
+            Start Reading
+            <span class="arrow bi bi-arrow-right"></span>
+            </button>
+        </div>
+        </section>
+    </main>
 
-    </section>
+<!-- ******************************************************************Feature Section*********************************************************** -->
 
+    <section class="featured-section" id="featuredSection"></section>
 
+<!-- ************************************************************Popular section********************************************************************* -->
+    
+    <div class="popular-container">
+        <h2>Popular Categories</h2>
+        <div class="categories-grid" id="categoriesGrid"></div>
+    </div>
 
+<!-- *************************************************************Newsletter container************************************************************ -->
+ 
+    <div class="newsletter-container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest posts and updates delivered straight to your inbox.</p>
+        <form class="subscription-form" id="newsletterForm">
+            <input 
+                type="email" 
+                class="email-input" 
+                placeholder="Enter your email"
+                id="emailInput"
+                required
+            >
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
 <!-- ************************************************************Footer**************************************************************************** -->
-
+   
     <footer class="page-footer">
         <div class="footer-content">
             <div class="content-section"><a href="index.html" class="logo">MyBlog</a></div>
