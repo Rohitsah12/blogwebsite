@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.publish-button {
+    background-color: #d1e7dd;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.publish-button:hover {
+    background-color: #b4d4c4;
+    transform: scale(1.05);
+}
+.icon-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+/* 
+/* Dropdown Styling */
+.dropdown {
+    position: absolute;
+    top: 82px; 
+    right: 70px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 5px 0;
+    z-index: 1000;
+    /* display: none; */
+}
+
+.dropdown::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 2px;
+    border-top: 20px solid transparent;
+    border-bottom:20px solid white ;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown li a{
+    text-decoration: none;
+    color: #383838;
+}
+
+
+
+.dropdown li:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown.hidden {
+    display: none;
+}
+
+.profile-pic {
+    cursor: pointer;
+    position: relative;
+} 
+
+
+.editor-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.toolbar {
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.toolbar button {
+    padding: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toolbar button.active {
+    background-color: #d1e7dd;
+    border: 1px solid #b4d4c4;
+}
+.editor {
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    outline: none;
+}
+.blog-meta {
+    margin-bottom: 20px;
+}
+.blog-meta input, .blog-meta select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.preview-btn, .featured-btn {
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.error-msg {
+    color: red;
+    margin: 10px 0;
+    display: none;
+}
+.image-upload {
+    margin: 10px 0;
+    border: 2px dashed #ddd;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.image-preview {
+    max-width: 200px;
+    margin: 10px 0;
+    display: none;
+}
+.align-buttons {
+    display: flex;
+    gap: 5px;
+}
