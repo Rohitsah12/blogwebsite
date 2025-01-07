@@ -1,4 +1,4 @@
-function publishBlog() {
+function checkAllFields() {
     const title = document.getElementById('blogTitle').value.trim();
     const author = document.getElementById('authorName').value.trim();
     const category = document.getElementById('blogCategory').value;
@@ -13,8 +13,16 @@ function publishBlog() {
 
     // Hide error message if all fields are filled
     errorMsg.style.display = 'none';
+    return { title, author, category, content }; // Return the valid data
+}
 
-    // Redirect to the main page
+function publishBlog() {
+    const validData = checkAllFields();
+    if (!validData) {
+        return false; // Stop if validation failed
+    }
+    
+    // Proceed with publishing only if validation passed
     window.location.href = 'index.html';
     alert('Your blog has been published successfully!');
     return true;
@@ -71,28 +79,17 @@ imageInput.addEventListener('change', function(e) {
 });
 
 function validateAndPreview() {
-    const title = document.getElementById('blogTitle').value.trim();
-    const author = document.getElementById('authorName').value.trim();
-    const category = document.getElementById('blogCategory').value;
-    const content = document.getElementById('editor').innerHTML.trim();
-    const errorMsg = document.getElementById('errorMsg');
-
-    if (!title || !author || !category || !content) {
-        errorMsg.style.display = 'block';
-        return false;
+    const validData = checkAllFields();
+    if (!validData) {
+        return false; // Stop if validation failed
     }
-    // Hide error message if all fields are filled
 
-    errorMsg.style.display = 'none';
-
-
-
-    //Preview of blog with the help of session storage
+    // Proceed with preview only if validation passed
     const blogData = {
-        title,
-        author,
-        category,
-        content,
+        title: validData.title,
+        author: validData.author,
+        category: validData.category,
+        content: validData.content,
         image: uploadedImage
     };
 
@@ -102,6 +99,13 @@ function validateAndPreview() {
 }
 
 function addToFeatured() {
+    const validData = checkAllFields();
+    if (!validData) {
+        return false; // Stop if validation failed
+    }
+
+    // Proceed with featuring only if validation passed
     window.location.href = 'index.html';
-    alert('Your blog has been featured successfully!');   
+    alert('Your blog has been featured successfully!');
+    return true;
 }
