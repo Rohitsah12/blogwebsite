@@ -35,6 +35,32 @@ The Blog Website project is a fully responsive web-based platform designed for u
             alert('Your blog has been featured successfully!');
             ```
              After this, the page redirects to the homepage, allowing users to create another blog.
+        > Here are The Example Of writing of Text editor
+        ![alt text](./images/WritingExample.png)
+
+- previewBlog features
+    - When the user clicks the **Preview Button** in `write.html` page,if everything is valid, the blog data is gathered into an object, and it is stored in the session storage in JSON format.
+
+    - ## About Session Storage
+        Session Storage is a web storage mechanism that allows you to store data for the duration of the page session. This means the data will persist as long as the user does not close the browser tab. Once the tab is closed, the data is lost.
+
+        Session storage can be accessed using the sessionStorage object. Data is stored as key-value pairs, and you can store complex data like objects by converting them into strings using JSON.stringify(). You can then retrieve and use the data with JSON.parse().
+    
+        ```
+        const blogData = {
+            title: validData.title,
+            author: validData.author,
+            category: validData.category,
+            content: validData.content,
+            image: uploadedImage
+        };
+
+        sessionStorage.setItem('previewBlog', JSON.stringify(blogData));//Store the blog data in sessionStorage as a JSON string
+        ``` 
+
+    - When the user clicks the **Preview Button** on `write.html`, all the blog data is stored in session storage in JSON format. The data is then parsed and displayed on the previewBlog.html page in a structured manner, as shown in the image below.
+    ![alt text](./images/previewBlogExamples.png)
+        
 
 
 
