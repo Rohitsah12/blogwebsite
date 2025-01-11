@@ -6,7 +6,7 @@ The Blog Website project is a fully responsive web-based platform designed for u
 
 ![alt text](./images/folderstructure.png)
 
-# Features
+# Features and How To Use
 
 - index.html
     - This file serves as the primary entry point for a blog website, providing a well-structured, responsive, and interactive user interface.
@@ -60,7 +60,14 @@ The Blog Website project is a fully responsive web-based platform designed for u
 
     - When the user clicks the **Preview Button** on `write.html`, all the blog data is stored in session storage in JSON format. The data is then parsed and displayed on the previewBlog.html page in a structured manner, as shown in the image below.
     ![alt text](./images/previewBlogExamples.png)
+
+# Technical Details
+- Frontend: HTML, CSS (with Bootstrap icons for styling)
+- JavaScript: Vanilla JavaScript for DOM manipulation and interactive features.
+- Responsive Design: CSS media queries for mobile-friendliness.
         
+
+
 
 
 
