@@ -1,3 +1,8 @@
+/**
+ * Validates all required fields in the blog creation form.
+ * Displays an error message if any field is empty and prevents further actions.
+ * Returns the valid data if all fields are filled.
+ */
 function checkAllFields() {
     const title = document.getElementById('blogTitle').value.trim();
     const author = document.getElementById('authorName').value.trim();
@@ -16,6 +21,12 @@ function checkAllFields() {
     return { title, author, category, content }; // Return the valid data
 }
 
+
+
+/**
+ * Publishes the blog after validating the input fields.
+ * Redirects to the homepage and shows a success message if validation is successful.
+ */
 function publishBlog() {
     const validData = checkAllFields();
     if (!validData) {
@@ -28,6 +39,10 @@ function publishBlog() {
     return true;
 }
 
+/**
+ * Executes the formatting command on the content editor (e.g., justify text, bold, italic).
+ * Manages the active state of formatting buttons for better UI feedback.
+ */
 function format(command) {
     if (['justifyLeft', 'justifyCenter', 'justifyRight'].includes(command)) {
         deactivateAlignmentButtons();
@@ -36,6 +51,10 @@ function format(command) {
     toggleActiveState(command);
 }
 
+/**
+ * Toggles the active state of a formatting button based on its current state.
+ * Highlights buttons to indicate the applied formatting.
+ */
 function toggleActiveState(command) {
     const button = document.querySelector(`[onclick="format('${command}')"]`);
     if (document.queryCommandState(command)) {
@@ -45,6 +64,11 @@ function toggleActiveState(command) {
     }
 }
 
+
+/**
+ * Deactivates alignment formatting buttons by removing their active state.
+ * Ensures only the currently selected alignment is highlighted.
+ */
 function deactivateAlignmentButtons() {
     const alignButtons = ['justifyLeft', 'justifyCenter', 'justifyRight'];
     alignButtons.forEach(cmd => {
@@ -53,18 +77,30 @@ function deactivateAlignmentButtons() {
     });
 }
 
+/**
+ * Prompts the user to input a URL and creates a hyperlink in the content editor.
+ */
 function addLink() {
     const url = prompt('Enter URL:');
     if (url) document.execCommand('createLink', false, url);
 }
 
+// References to image upload elements
 const imageUpload = document.getElementById('imageUpload');
 const imageInput = document.getElementById('imageInput');
 const imagePreview = document.getElementById('imagePreview');
 let uploadedImage = null;
 
+/**
+ * Triggers the file input dialog for uploading an image.
+ */
 imageUpload.addEventListener('click', () => imageInput.click());
 
+
+/**
+ * Handles image selection and displays a preview of the uploaded image.
+ * Stores the image data as a base64 string.
+ */
 imageInput.addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (file) {
@@ -78,6 +114,11 @@ imageInput.addEventListener('change', function(e) {
     }
 });
 
+
+/**
+ * Validates the form fields and prepares a preview of the blog.
+ * Stores blog data in session storage and opens a preview page in a new tab.
+ */
 function validateAndPreview() {
     const validData = checkAllFields();
     if (!validData) {
@@ -98,6 +139,11 @@ function validateAndPreview() {
     return true;
 }
 
+
+/**
+ * Validates the form fields and marks the blog as featured.
+ * Redirects to the homepage and shows a success message if validation is successful.
+ */
 function addToFeatured() {
     const validData = checkAllFields();
     if (!validData) {
