@@ -163,7 +163,7 @@ section {
     justify-content: center;
     text-align: center;
     color: black;
-    background-image: url(./mainsectionbg.png);
+    background-image: url(../images/mainsectionbg.png);
     background-size: cover;
     background-position: center;
     padding: 20px;

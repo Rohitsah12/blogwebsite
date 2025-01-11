@@ -14,32 +14,6 @@ searchIcon.addEventListener('click',toggleSearchBar);
 searchInput.addEventListener('blur',toggleSearchBar);
 
 
-
-//dropdown on profile pic
-
-function toggleDropdown() {
-    const dropdown = document.getElementById('profileDropdown');
-    dropdown.classList.toggle('hide');
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function (event) {
-    const dropdown = document.getElementById('profileDropdown');
-    const profilePic = document.querySelector('.profile-pic');
-    if (!dropdown.contains(event.target) && !profilePic.contains(event.target)) {
-        dropdown.classList.add('hide');
-    }
-});
-
-
-
-//write button logic
-
-
-function writeButton(){
-    alert("Please Create an account first!!!");
-}
-
 // Main seection
 function startReading() {
     alert('Start reading clicked');
@@ -51,7 +25,7 @@ function startReading() {
 
 const featuredPosts = [
     {
-        image: "./technology.png",
+        image: "../images/technology.png",
         tags: ["Technology", "Design"],
         title: "The Future of Web Development",
         description: "Explore the latest trends and technologies shaping the future of web development...",
@@ -59,7 +33,7 @@ const featuredPosts = [
         readTime: "5 min read"
     },
     {
-        image: "./technology.png",
+        image: "../images/technology.png",
         tags: ["Technology", "Design"],
         title: "The Future of Web Development",
         description: "Explore the latest trends and technologies shaping the future of web development...",
@@ -67,7 +41,7 @@ const featuredPosts = [
         readTime: "5 min read"
     },
     {
-        image: "./technology.png",
+        image: "../images/technology.png",
         tags: ["Technology", "Design"],
         title: "The Future of Web Development",
         description: "Explore the latest trends and technologies shaping the future of web development...",

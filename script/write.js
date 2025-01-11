@@ -23,7 +23,7 @@ function publishBlog() {
     }
     
     // Proceed with publishing only if validation passed
-    window.location.href = 'index.html';
+    window.location.href = './index.html';
     alert('Your blog has been published successfully!');
     return true;
 }
@@ -94,7 +94,7 @@ function validateAndPreview() {
     };
 
     sessionStorage.setItem('previewBlog', JSON.stringify(blogData));
-    window.open('previewBlog.html', '_blank');
+    window.open('./previewBlog.html', '_blank');
     return true;
 }
 
@@ -105,7 +105,7 @@ function addToFeatured() {
     }
 
     // Proceed with featuring only if validation passed
-    window.location.href = 'index.html';
+    window.location.href = './index.html';
     alert('Your blog has been featured successfully!');
     return true;
 }
