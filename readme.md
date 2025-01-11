@@ -65,6 +65,14 @@ The Blog Website project is a fully responsive web-based platform designed for u
 - Frontend: HTML, CSS (with Bootstrap icons for styling)
 - JavaScript: Vanilla JavaScript for DOM manipulation and interactive features.
 - Responsive Design: CSS media queries for mobile-friendliness.
+
+
+# Future Enhancements
+- User Authentication: Implement user accounts for personalized experiences.
+- Comment Section: Allow readers to comment on blog posts.
+- Database Integration: Store blog posts in a database for persistent data storage and it will help to create featured post cards and it will help to track popular section properly.
+- Dark Mode: Add a dark mode toggle for better accessibility.
+
         
 
 
