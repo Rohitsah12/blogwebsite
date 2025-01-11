@@ -86,22 +86,7 @@ body {
     display: none;
 }
 
-/* Get Started Button */
-.get-started {
-    background-color: #000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.get-started:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
 
 /* Responsive Header */
 @media (max-width: 768px) {
@@ -136,10 +121,6 @@ body {
         font-size: 18px;
     }
 
-    .get-started {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
 }
 
 
