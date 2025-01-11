@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/write.css"> <!--For body   -->
 </head>
 <body>
+
+<!-- **************************************************************** Header Section ************************************************************-->
     <header class="header">
         <div><a href="./index.html" class="logo">MyBlog</a></div>
         <div class="icon-container">
@@ -19,10 +21,10 @@
 
     </header>
 
-
+<!--**************************************************************** Editor Section *************************************************************-->
     <div class="editor-container">
         <div class="blog-meta">
-            <input type="text" id="blogTitle" placeholder="Enter blog title *" required>
+            <input type="text" id="blogTitle" placeholder="Enter blog title *" required> <!--This input is for blog Tittle-->
             <input type="text" id="authorName" placeholder="Author name *" required>
             <select id="blogCategory" required>
                 <option value="">Select Category *</option>
@@ -56,7 +58,9 @@
         </div>
 
         <div class="editor" id="editor" contenteditable="true"></div>
+        
 
+<!-- ***********************************************************Preview and featured Buttons ****************************************************-->
         <div class="buttons">
             <button class="preview-btn" onclick="validateAndPreview()">Preview Blog</button>
             <button class="featured-btn" onclick="addToFeatured()">Add to Featured</button>
