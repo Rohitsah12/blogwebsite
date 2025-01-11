@@ -1,28 +1,29 @@
-//Toggle search input
 const searchIcon=document.getElementById('searchIcon');
 const headerSearchForm=document.getElementById('headerSearchForm');
 const searchInput=document.getElementById('searchInput');
 
+// Toggles the visibility of the search bar and focuses the input field
 function toggleSearchBar(){
     searchIcon.classList.toggle('hide');
     headerSearchForm.classList.toggle('hide');
     searchInput.focus();
 }
 
+// Event listener for clicking the search icon to toggle the search bar
 searchIcon.addEventListener('click',toggleSearchBar);
 
+// Event listener for blurring the search input to hide the search bar
 searchInput.addEventListener('blur',toggleSearchBar);
 
 
 // Main seection
+// Handles the "Start Reading" button click event by displaying an alert
 function startReading() {
     alert('Start reading clicked');
 }
 
 
 //featured section
-
-
 const featuredPosts = [
     {
         image: "../images/technology.png",
@@ -49,7 +50,7 @@ const featuredPosts = [
         readTime: "5 min read"
     }
 ];
-
+// Generates HTML for a single featured post card
 function createCard(post) {
     return `
         <article class="card">
@@ -81,6 +82,7 @@ function createCard(post) {
     `;
 }
 
+// Renders all featured posts by creating and appending post cards to the featured section
 function renderFeaturedPosts() {
     const section = document.getElementById('featuredSection');
     section.innerHTML = `
@@ -90,7 +92,7 @@ function renderFeaturedPosts() {
         </div>
     `;
 
-    // Add click handlers for action buttons
+        // Adds event listeners to the action buttons for toggling the active state
     const actionButtons = document.querySelectorAll('.action-button');
     actionButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -112,6 +114,8 @@ const categories = [
     { id: 4, title: 'Lifestyle' }
 ];
 
+
+// Creates a category card element and attaches a click event listener
 function createCategoryCard(category) {
     const card = document.createElement('div');
     card.className = 'category-card';
@@ -122,6 +126,7 @@ function createCategoryCard(category) {
     
     card.appendChild(title);
 
+    // Displays an alert when the category card is clicked
     card.addEventListener('click', () => {
         alert(`Clicked on ${category.title}`);
     });
@@ -129,6 +134,7 @@ function createCategoryCard(category) {
     return card;
 }
 
+// Renders all category cards by creating and appending them to the categories grid
 function renderCategories() {
     const grid = document.getElementById('categoriesGrid');
     categories.forEach(category => {
